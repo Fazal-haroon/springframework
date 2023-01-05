@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.impl.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
+
+		BinarySearchImpl binarySearch = new BinarySearchImpl();
+		int i = binarySearch.binarySearch(new int[]{12, 42, 11, 1}, 3);
+		System.out.println("i = " + i);
+
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
