@@ -8,17 +8,24 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
+    @Qualifier("bubble")
     private SortAlgorithm sortAlgorithm;
+    //here we use name of the instance variable to solve the conflict
+    //@Primary has higher priority over the name of variable
+//    private SortAlgorithm quickSortAlgorithm;
 
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
+    //Constructor injection, setter injection and no setter or constructor
+    //setter injection and no setter or constructor are same
+    //mandatory dependency then use constructor, if it's optional dependency, go for setter injection
+    //there is not a lot of difference in terms of mandatory or optional dependences.
 
     public int binarySearch(int[] numbers, int numberToSearchFor) {
         //Implementing Sorting Logic
 
         //implement bubbleSort here, this is tight coupling
-//        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+//        BubbleSortAlgorithm sortAlgorithm = new BubbleSortAlgorithm();
+//        int[] sort = quickSortAlgorithm.sort(numbers);
+//        System.out.println("sort = " + quickSortAlgorithm);
         int[] sort = sortAlgorithm.sort(numbers);
         System.out.println("sort = " + sortAlgorithm);
 
