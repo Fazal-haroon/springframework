@@ -1,4 +1,4 @@
-package com.example.demo.impl;
+package com.example.demo.basic;
 
 public interface SortAlgorithm {
 
