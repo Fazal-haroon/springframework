@@ -8,7 +8,8 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorithm bubbleSortAlgorithm;
+    @Qualifier("bubble")
+    private SortAlgorithm sortAlgorithm;
     //here we use name of the instance variable to solve the conflict
     //@Primary has higher priority over the name of variable
 //    private SortAlgorithm quickSortAlgorithm;
@@ -22,11 +23,11 @@ public class BinarySearchImpl {
         //Implementing Sorting Logic
 
         //implement bubbleSort here, this is tight coupling
-//        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+//        BubbleSortAlgorithm sortAlgorithm = new BubbleSortAlgorithm();
 //        int[] sort = quickSortAlgorithm.sort(numbers);
 //        System.out.println("sort = " + quickSortAlgorithm);
-        int[] sort = bubbleSortAlgorithm.sort(numbers);
-        System.out.println("sort = " + bubbleSortAlgorithm);
+        int[] sort = sortAlgorithm.sort(numbers);
+        System.out.println("sort = " + sortAlgorithm);
 
         //Search the array
 
