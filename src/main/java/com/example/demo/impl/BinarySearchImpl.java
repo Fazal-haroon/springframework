@@ -14,9 +14,6 @@ public class BinarySearchImpl {
     //setter injection and no setter or constructor are same
     //mandatory dependency then use constructor, if it's optional dependency, go for setter injection
     //there is not a lot of difference in terms of mandatory or optional dependences.
-    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
 
     public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
