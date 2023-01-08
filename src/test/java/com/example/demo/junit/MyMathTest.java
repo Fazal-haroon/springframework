@@ -7,14 +7,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyMathTest {
 
+    private MyMath myMath = new MyMath();
+
     @Test
-    void calculateSum() {
+    void calculateSum_ThreeDigitArray() {
         //empty of method is success test pass msg
         //Test condition or Assert to check the behaviours
-        MyMath myMath = new MyMath();
-        int[] numberArray = {1, 2, 3, 5, 4};
-        int i = myMath.calculateSum(numberArray);
-        System.out.println("i = " + i);
-        Assertions.assertEquals(i,15);
+        assertEquals(15, myMath.calculateSum(new int[] {1, 2, 3, 5, 4}));
+    }
+
+    @Test
+    void calculateSum_ZeroDigitArray() {
+        Assertions.assertEquals(0, myMath.calculateSum(new int[] {}));
     }
 }
