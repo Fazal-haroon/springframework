@@ -1,0 +1,5 @@
+Component Annotations
+1. @Component - Generic Component
+2. @Repository - encapsulating storage, retrieval, and search behavior typically from a relational database
+3. @Service - Business Service Facade
+4. @Controller - Controller in MVC pattern
