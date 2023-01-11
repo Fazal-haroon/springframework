@@ -1,6 +1,5 @@
 package com.example.demo.basic;
 
-import com.example.demo.SpringIn5StepBasicApp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
