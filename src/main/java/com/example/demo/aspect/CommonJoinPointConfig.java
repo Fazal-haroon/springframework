@@ -19,6 +19,9 @@ public class CommonJoinPointConfig {
     public void beanContainingDao() {
     }
 
-    @Pointcut("within(com.example.demo.service..*")
+    @Pointcut("within(com.example.demo.service..*)")
     public void dataLayerExecutionWithWithin(){}
+
+    @Pointcut("@annotation(com.example.demo.aspect.TrackTime)")
+    public void trackTimeAnnotation(){}
 }

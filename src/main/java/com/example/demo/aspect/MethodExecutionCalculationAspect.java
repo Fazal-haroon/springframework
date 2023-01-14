@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class MethodExecutionCalculationAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Around("com.example.demo.aspect.CommonJoinPointConfig.dataLayerExecution()")
+    @Around("com.example.demo.aspect.CommonJoinPointConfig.trackTimeAnnotation()")
     public void aroundMethod(ProceedingJoinPoint joinPoint) throws Throwable { //point would allow you to continue with execution of method
         //startTime = x
         long startTime = System.currentTimeMillis();
