@@ -18,7 +18,7 @@ public class BeforeAspect {
     //define point cut here
     //execution(* PACKAGE.*.*(..)) -> first * means any return type
     //(Weaving and Weaver) a framework which implements it called weaver, the process of doing that is called viewing
-    @Before("execution(* com.example.demo.service..*(..))") //this will intercept only Business1, pointcut is expression which define for Business1
+    @Before("com.example.demo.aspect.CommonJoinPointConfig.dataLayerExecution()") //this will intercept only Business1, pointcut is expression which define for Business1
     public void before(JoinPoint joinPoint){ //get details use JoinPoint, it is specific interception of a method call, specific execution instance.
         logger.info(" Intercepted Method Calls - {}", joinPoint ); //this is called an advice, what should i do when i do the interception
     }
