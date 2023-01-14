@@ -16,17 +16,17 @@ public class AfterAopAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(AfterAopAspect.class);
 
-    @AfterReturning(value = "execution(* com.example.demo.service.Business1.*(..))", returning = "result")
+    @AfterReturning(value = "com.example.demo.aspect.CommonJoinPointConfig.business1LayerExecution()", returning = "result")
     public void afterReturning(JoinPoint joinPoint, Object result) {
         logger.info("{} returned with value {}", joinPoint, result);
     }
 
-    @AfterThrowing(value = "execution(* com.example.demo.service.Business1.*(..))", throwing = "exception")
+    @AfterThrowing(value = "com.example.demo.aspect.CommonJoinPointConfig.business1LayerExecution()", throwing = "exception")
     public void afterThrowing(JoinPoint joinPoint, Exception exception) {
         logger.info("{} throw exception {}", joinPoint, exception);
     }
 
-    @After(value = "execution(* com.example.demo.service.Business1.*(..))")
+    @After(value = "com.example.demo.aspect.CommonJoinPointConfig.business1LayerExecution()")
     public void after(JoinPoint joinPoint) {
         logger.info("after execution of {}", joinPoint);
     }
