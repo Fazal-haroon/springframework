@@ -23,5 +23,6 @@ public class DemoJDBCApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("All Person Data : {}", personJdbcDao.findAll());
+		logger.info("Find Person by Id '2' : {}", personJdbcDao.findById(2));
 	}
 }
