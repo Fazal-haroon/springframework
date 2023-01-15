@@ -30,5 +30,6 @@ public class DemoJPAApplication implements CommandLineRunner {
 		logger.info("Inserting 5th person : {}", personRepository.insert(new Person(5, "Abdul Hanan", "Malakand", new Date())));
 		//INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE ) VALUES(2, 'Haroon', 'Islamabad', NOW());
 		logger.info("Updating 2th person : {}", personRepository.update(new Person(2, "Fazal Haroon", "Batkhela Malakand", new Date())));
+		personRepository.deleteById(3);
 	}
 }
