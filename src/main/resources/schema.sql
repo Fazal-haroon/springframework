@@ -1,17 +1,17 @@
 create table person
 (
-    id integer not null,
-    name varchar(255) not null,
-    location varchar(255),
-    birth_date timestamp,
-    primary key(id)
+    ID integer not null,
+    PERSON_NAME varchar(255) not null,
+    LOCATION varchar(255),
+    BIRTH_DATE timestamp,
+    primary key(ID)
 );
 
-INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE )
+INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE )
 VALUES(1,  'Fazal', 'Peshawar',NOW());
-INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE )
+INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE )
 VALUES(2,  'Haroon', 'Islamabad',NOW());
-INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE )
+INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE )
 VALUES(3,  'Khan', 'Lahore',NOW());
--- INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE )
--- VALUES(4,  'Khan2', 'Islamabad',NOW());
+INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE )
+VALUES(4,  'Khan', 'Islamabad',NOW());

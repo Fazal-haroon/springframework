@@ -24,5 +24,9 @@ public class DemoJDBCApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		logger.info("All Person Data : {}", personJdbcDao.findAll());
 		logger.info("Find Person by Id '2' : {}", personJdbcDao.findById(2));
+		logger.info("Find Person by name 'khan' : {}", personJdbcDao.findByName("Khan"));
+		logger.info("Find Person by location 'Islamabad' : {}", personJdbcDao.findByLocation("Islamabad"));
+		logger.info("Delete Person by Id '4' : {}", personJdbcDao.deleteById(4));
+		logger.info("Delete Person by Id '3' : {}", personJdbcDao.deleteById(3));
 	}
 }

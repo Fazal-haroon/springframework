@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 public class Person {
     private Integer id;
-    private String name;
+    private String personName;
     private String location;
     private Date birthDate;
 }
