@@ -26,6 +26,7 @@ public class DemoJPAApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		logger.info("All Person Data : {}", personRepository.findAll());
 		logger.info("User id 1 -> {}", personRepository.findById(1));
 		logger.info("Inserting 5th person : {}", personRepository.insert(new Person(5, "Abdul Hanan", "Malakand", new Date())));
 		//INSERT INTO PERSON (ID, PERSON_NAME, LOCATION, BIRTH_DATE ) VALUES(2, 'Haroon', 'Islamabad', NOW());

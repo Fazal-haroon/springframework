@@ -12,6 +12,7 @@ import java.util.Date;
 @ToString
 @Entity
 @Table(name = "person")
+@NamedQuery(name = "find_all_persons", query = "select p from Person p")
 public class Person {
     @Id
     private Integer id;
