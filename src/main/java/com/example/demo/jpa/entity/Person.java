@@ -14,7 +14,6 @@ import java.util.Date;
 @Table(name = "person")
 public class Person {
     @Id
-    @GeneratedValue
     private Integer id;
     @Column(name = "person_name")
     private String personName;
